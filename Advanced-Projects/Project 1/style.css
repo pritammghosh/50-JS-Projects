@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    background-color: #4f89f5;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    font-family: poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.content{
+    background-color: #fff;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.content span{
+    font-size: 5rem;
+    background-color: #fff;
+}
+.content #hrs::after{
+    content: "Hrs";
+    font-size: 2rem;
+}
+.content #min::after{
+    content: "Min";
+    font-size: 2rem;
+}
+.content #sec::after{
+    content: "Sec";
+    font-size: 2rem;
+}
