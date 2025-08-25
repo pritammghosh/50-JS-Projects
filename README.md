@@ -1,8 +1,4 @@
 
----
-
-### ✅ FULL `README.md` – Paste this as-is:
-
 ````markdown
 # ⚔️ 50+ JavaScript Projects – The Ultimate Challenge
 
