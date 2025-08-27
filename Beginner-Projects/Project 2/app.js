@@ -1,3 +1,6 @@
+let isRunning = false;
+let toggle = null;
+
 const colors = [
   "#FF5733", "#33FF57", "#3357FF", "#FF33A8", "#A833FF", "#33FFF5", "#F5FF33",
   "#FF8C33", "#8CFF33", "#33FF8C", "#FF3333", "#33FF33", "#3333FF", "#FF33FF",
@@ -13,8 +16,18 @@ let bgc = document.body;
 let headText = document.querySelector("h1");
 let btn = document.querySelector("button");
 
-setInterval(()=>{
-    let randomColor = colors[Math.floor(Math.random() * colors.length)];
-  bgc.style.backgroundColor = randomColor;
-  headText.textContent = `Color: ${randomColor}`;
-},1000)
+btn.addEventListener("click", () => {
+  if (!isRunning) {
+    toggle = setInterval(() => {
+      let randomColor = colors[Math.floor(Math.random() * colors.length)];
+      bgc.style.backgroundColor = randomColor;
+      headText.textContent = `Color: ${randomColor}`;
+    }, 1000);
+    btn.textContent = "Stop";
+    isRunning = true;
+  } else {
+    clearInterval(toggle);
+    btn.textContent = "Start";
+    isRunning = false;
+  }
+});
